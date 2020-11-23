@@ -11,5 +11,12 @@ namespace Core.Specifications
 
         //List take a generic expression and use function of type T and return generic object, can be includes operation
         List<Expression<Func<T, object>>> Includes {get;}
+        Expression<Func<T, Object>> OrderBy {get;}
+
+        Expression<Func<T, Object>> OrderByDescending {get;}
+
+      int Take {get;}
+         int Skip {get;}
+         bool IsPagingEnabled {get;}
     }
 }
